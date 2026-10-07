@@ -111,7 +111,7 @@ app = Flask(__name__)
 # -------------------------------------------------
 # Training data exactly from the supplied notebook
 # -------------------------------------------------
-celsius_q = np.arra(
+celsius_q = np.array(
     [-40, -10, 0, 8, 10, 15, 22, 50, 20, 38],
     dtype=float
 )
@@ -141,7 +141,7 @@ model.compile(
 model.fit(
     celsius_q,
     fahrenheit_a,
-    epochs=50,
+    epochs=800,
     verbose=False
 )
 
@@ -192,11 +192,11 @@ def health():
     return jsonify({
         "status": "ok",
         "model": "TensorFlow Dense Neural Network 4-4-1",
-        "epochs": 50
+        "epochs": 800
     })
 
 
-# -------------------------------------------------
+# -----------------------------------------
 # Run locally
 # -------------------------------------------------
 if __name__ == "__main__":
