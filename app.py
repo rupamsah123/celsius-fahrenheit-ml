@@ -141,7 +141,7 @@ model.compile(
 model.fit(
     celsius_q,
     fahrenheit_a,
-    epochs=800,
+    epochs=50,
     verbose=False
 )
 
